@@ -7,6 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 
+/**
+ * JUnit 5 test case for data handler class.
+ *
+ * @author Verena Pfaff
+ */
 public class DataHandlerTest {
 
     private final String TEST_FILE_URL = "test.csv";
