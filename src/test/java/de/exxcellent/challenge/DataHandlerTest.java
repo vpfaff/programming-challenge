@@ -1,5 +1,6 @@
 package de.exxcellent.challenge;
 
+import de.exxcellent.challenge.handler.DataHandler;
 import de.exxcellent.challenge.util.CSVReader;
 import org.junit.jupiter.api.Test;
 
@@ -27,6 +28,6 @@ public class DataHandlerTest {
     @Test
     public void getSmallestSpreadTest() throws IOException {
         String successLabel = "2";
-        assertEquals("identifier must be 2", successLabel, dataHandler.getSmallestSpreadIdentifier());
+        assertEquals(successLabel, dataHandler.getSmallestSpreadIdentifier(), "identifier must be 2");
     }
 }
