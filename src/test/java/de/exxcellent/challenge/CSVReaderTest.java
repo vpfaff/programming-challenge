@@ -1,8 +1,10 @@
 package de.exxcellent.challenge;
 
 import de.exxcellent.challenge.model.Data;
+import de.exxcellent.challenge.util.CSVReader;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -26,7 +28,7 @@ public class CSVReaderTest {
             TEST_FILE_HEADERS[2]);
 
     @Test
-    public void parseInputTest() {
+    public void parseInputTest() throws IOException {
         List<Data> actualOutput = csvReader.parseInput();
 
         assertAll("csv output",

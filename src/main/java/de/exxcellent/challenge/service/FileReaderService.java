@@ -2,6 +2,7 @@ package de.exxcellent.challenge.service;
 
 import de.exxcellent.challenge.model.Data;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -10,5 +11,5 @@ import java.util.List;
  * @author Verena Pfaff
  */
 public interface FileReaderService {
-    List<Data> parseInput();
+    List<Data> parseInput() throws IOException;
 }
