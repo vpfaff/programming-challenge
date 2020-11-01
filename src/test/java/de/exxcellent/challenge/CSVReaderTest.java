@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
  * @author Verena Pfaff
  */
 public class CSVReaderTest {
+
     private final String TEST_FILE_URL = "test.csv";
     private final String[] TEST_FILE_HEADERS = {"Identifier", "MaxVal", "MinVal"};
 

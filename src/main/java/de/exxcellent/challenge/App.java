@@ -10,6 +10,7 @@ import java.io.IOException;
  * design. Read: create your own classes and packages as appropriate.
  *
  * @author Benjamin Schmid <benjamin.schmid@exxcellent.de>
+ * @author Verena Pfaff
  */
 public final class App {
 

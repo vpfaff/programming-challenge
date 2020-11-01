@@ -57,6 +57,8 @@ public class CSVReader implements FileReaderService {
 
         CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new InputStreamReader(inputStream));
 
+        // Note: there are no instructions on how to handle empty/wrong cell values in CSV files
+        // this should be taken into account in future solutions to make the code more robust
         for (CSVRecord csvRecord : parser) {
             String identifier = csvRecord.get(identifierHeader);
             int maxValue = 0;
@@ -70,10 +72,8 @@ public class CSVReader implements FileReaderService {
                 e.printStackTrace();
             }
 
-            // Note: There are no instructions on how to handle empty/wrong cell values in CSV files
-            // this should be taken into account in future solutions to make the code more robust
-            //
-            // swap min and max value if necessary
+            // swap min and max value
+            // this is needed to avoid negative values as a result of calculating the smallest spread later
             if (maxValue < minValue) {
                 temp = maxValue;
                 maxValue = minValue;
