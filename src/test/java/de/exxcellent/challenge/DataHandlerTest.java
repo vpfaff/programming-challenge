@@ -26,7 +26,7 @@ public class DataHandlerTest {
     private final DataHandler dataHandler = new DataHandler(csvReader);
 
     @Test
-    public void getSmallestSpreadTest() throws IOException {
+    public void getSmallestSpreadIdentifierTest() throws IOException {
         String successLabel = "2";
         assertEquals(successLabel, dataHandler.getSmallestSpreadIdentifier(), "identifier must be 2");
     }
